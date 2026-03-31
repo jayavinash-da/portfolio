@@ -461,17 +461,32 @@
     /* ── DIVIDER ── */
     .divider { width: 60px; height: 3px; background: var(--accent); margin-bottom: 48px; border-radius: 2px; }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      nav { padding: 0 4%; }
-      .nav-links { display: none; }
-      section { padding: 70px 5%; }
-      .about-grid { grid-template-columns: 1fr; gap: 36px; }
-      .hero-stats { gap: 24px; }
-      .exp-header { flex-direction: column; }
-      .edu-card { grid-template-columns: 1fr; }
-      .projects-grid { grid-template-columns: 1fr; }
-    }
+   /* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  nav { padding: 0 4%; }
+  .nav-links { display: none; }
+  section { padding: 70px 5%; }
+  .about-grid { grid-template-columns: 1fr; gap: 36px; }
+  .hero-stats { gap: 24px; }
+  .exp-header { flex-direction: column; }
+  .edu-card { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+
+  /* MOBILE EXPERIENCE FIX */
+  .exp-bullets li {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .exp-bullets li strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .exp-bullets li span {
+    display: block;
+  }
+}
     @media (max-width: 480px) {
       .hero-name { font-size: 2.5rem; }
       .hero-ctas { flex-direction: column; }
